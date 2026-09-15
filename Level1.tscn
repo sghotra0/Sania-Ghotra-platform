@@ -1,0 +1,13 @@
+[gd_scene format=4 uid="uid://wa0po0q7iin3"]
+
+[ext_resource type="PackedScene" uid="uid://cnii03he7m13x" path="res://player.tscn" id="1_mc20k"]
+[ext_resource type="PackedScene" uid="uid://jnd42okk82pp" path="res://map.tscn" id="2_cove1"]
+
+[node name="Node2D" type="Node2D" unique_id=1661045571]
+
+[node name="Player" parent="." unique_id=922319640 instance=ExtResource("1_mc20k")]
+position = Vector2(-100, -35)
+
+[node name="TileMapLayer" parent="." unique_id=209677503 instance=ExtResource("2_cove1")]
+position = Vector2(0, -1)
+tile_map_data = PackedByteArray("AAD6//7/AAACAAUAAAD7//7/AAACAAUAAAD///3/AAACAAUAAAD+//3/AAACAAUAAAABAPz/AAACAAUAAAACAPz/AAADAAUAAAAEAP3/AAACAAUAAAAFAP3/AAACAAUAAAAHAP7/AAACAAUAAAAIAP7/AAACAAUAAAD+/wAAAAACAAUAAAD//wAAAAACAAUAAAAAAAAAAAACAAUAAAABAAAAAAACAAUAAAACAAAAAAACAAUAAAD8/wAAAAABAAUAAAD9/wAAAAACAAUAAAA=")
