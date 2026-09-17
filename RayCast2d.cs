@@ -13,11 +13,3 @@ public partial class RayCast2d : RayCast2D
 	{
 	}
 }
-func _physics_process(_delta: float) -> void:
-	if laser_ray.is_colliding():
-		# If it's an enemy then take action
-		if collider.is_in_group("enemies"):
-			print("Enemy found!")
-	else:
-		# The ray is shooting into empty space
-		pass

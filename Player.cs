@@ -37,8 +37,6 @@ public partial class Player : CharacterBody2D
 		Velocity = velocity;
 		MoveAndSlide();
 	}
-}
-func _on_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
-		print("Player entered the area!")
-		# Put your custom logic here (e.g., change scene, play sound)
+	func _physics_process(delta: float) -> void:
+	# Get the input direction vector based on up, down, left, right inputs
+	var direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
