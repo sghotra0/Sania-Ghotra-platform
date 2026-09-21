@@ -13,7 +13,3 @@ public partial class Area2d : Area2D
 	{
 	}
 }
-func _on_body_entered(body: Node2D) -> void:
-	# Check if the entering body is in the "player" group
-	if body.is_in_group("player"):
-		print("Player entered the area!")

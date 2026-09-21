@@ -13,7 +13,3 @@ public partial class AnimatedSprite2d : AnimatedSprite2D
 	{
 	}
 }
-
-func _ready():
-	# Play the animation as soon as the node enters the scene
-	animated_sprite.play("walk") 
