@@ -13,7 +13,7 @@ position = Vector2(1179, -1624)
 FileName = "res://Level2.tscn"
 
 [node name="Player" parent="." unique_id=922319640 instance=ExtResource("1_mc20k")]
-position = Vector2(1396, -1668)
+position = Vector2(-107, -83)
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=949469830]
 
