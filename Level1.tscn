@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cnii03he7m13x" path="res://player.tscn" id="1_mc20k"]
 [ext_resource type="PackedScene" uid="uid://jnd42okk82pp" path="res://map.tscn" id="2_cove1"]
 [ext_resource type="PackedScene" uid="uid://brqc4s8kcnv8f" path="res://enemy2.tscn" id="4_dwyiq"]
+[ext_resource type="PackedScene" uid="uid://c8cotishknu66" path="res://enemy1 .tscn" id="5_dn5ey"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tgpiq"]
 
@@ -14,7 +15,7 @@ position = Vector2(1179, -1624)
 FileName = "res://Level2.tscn"
 
 [node name="Player" parent="." unique_id=922319640 instance=ExtResource("1_mc20k")]
-position = Vector2(-107, -83)
+position = Vector2(-110, -37)
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=949469830]
 
@@ -24,6 +25,7 @@ collide_with_areas = true
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1876791336]
 position = Vector2(50, 46)
+zoom = Vector2(3, 3)
 
 [node name="TileMapLayer" parent="." unique_id=209677503 instance=ExtResource("2_cove1")]
 position = Vector2(0, -1)
@@ -39,5 +41,8 @@ shape = SubResource("RectangleShape2D_tgpiq")
 
 [node name="CharacterBody2D" parent="." unique_id=385217939 instance=ExtResource("4_dwyiq")]
 position = Vector2(2175, 253)
+
+[node name="Enemy" parent="." unique_id=36427185 instance=ExtResource("5_dn5ey")]
+position = Vector2(8, -81)
 
 [connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
