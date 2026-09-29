@@ -3,28 +3,40 @@ using System;
 
 public partial class Enemy2 : Enemy
 {
+    private const int Speed = 150;
+
+    private Node2D target;
+
     public override void _PhysicsProcess(double delta)
     {
-    public override void _PhysicsProcess(double delta)
+
+        if (target != null)
         {
-        Vector2 velocity = Velocity;
-        @export var speed: float = 150.0
+            var direction = target.GlobalPosition - GlobalPosition;
+            Velocity = direction.Normalized() * Speed;
+        }
 
-# Finds the player node in the scene tree
-        @onready var player = get_tree().current_scene.find_child("Player")
+        else
+        {
+            Velocity = Vector2.Zero;
+        }
 
-        func _physics_process(_delta: float) -> void:
-        if player:
-# Get direction pointing toward the player
-        var direction = global_position.direction_to(player.global_position)
-		
-# Set velocity and move
-        velocity = direction * speed
-        move_and_slide()
-		
-# Optional: Flip the sprite to face the player
-        if direction.x < 0:
-            $Sprite2D.flip_h = true
-        elif direction.x > 0:
-            $Sprite2D.flip_h = false
+
+        MoveAndSlide();
+    }
+
+
+    public void FoundPlayer(Node2D body)
+    {
+        if (body is Player)
+            target = body;
+    }
+
+
+    public void LostPlayer(Node2D body)
+    {
+        if (body is Player)
+            target = null;
+    }
+}
         

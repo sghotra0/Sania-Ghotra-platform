@@ -12,12 +12,8 @@
   <component name="ChangeListManager">
     <list default="true" id="17a432d4-fac2-4a42-84c8-37f7a2c03f4b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CharacterBody2d.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CharacterBody2d.cs.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Level1.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Level1.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enemy2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy2.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Level2.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Level2.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enemy2.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/enemy2.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +28,7 @@
     <setting file="file://$PROJECT_DIR$/Enemy2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Player.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0,
   &quot;fromUser&quot;: false
@@ -128,12 +125,15 @@
       <workItem from="1790616014436" duration="120000" />
       <workItem from="1790616309501" duration="1850000" />
       <workItem from="1790618188264" duration="100000" />
+      <workItem from="1790701954956" duration="908000" />
+      <workItem from="1790702874919" duration="176000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
