@@ -20,9 +20,10 @@ position = Vector2(31, 9)
 
 [node name="Portal" parent="." unique_id=310453333 instance=ExtResource("3_s8dg4")]
 position = Vector2(4018, -302)
+FileName = "res://enemy_3.tscn"
 
 [node name="Enemy" parent="." unique_id=36427185 instance=ExtResource("4_ex07k")]
 position = Vector2(1937, 289)
 
 [node name="CharacterBody2D" parent="." unique_id=385217939 instance=ExtResource("5_psxy2")]
-position = Vector2(235, -217)
+position = Vector2(230, -370)

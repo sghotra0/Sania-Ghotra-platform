@@ -3,17 +3,25 @@
 [ext_resource type="Texture2D" uid="uid://bfurrmhr1sjbb" path="res://3.png" id="1_jfe6r"]
 [ext_resource type="Script" uid="uid://b7vdjvbsthu0j" path="res://Enemy2.cs" id="1_jugo2"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_gkjmy"]
+radius = 156.15697
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_lmyl5"]
-radius = 305.06924
+radius = 200.56421
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dn5ey"]
-radius = 17.029387
+radius = 33.01515
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=385217939]
 script = ExtResource("1_jugo2")
 
+[node name="Hurtbox" type="Area2D" parent="." unique_id=818333566]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=350932735]
+shape = SubResource("CircleShape2D_gkjmy")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1873147728]
-position = Vector2(-2, -53)
+position = Vector2(2, -6)
 shape = SubResource("CircleShape2D_lmyl5")
 
 [node name="DetectionZone" type="Area2D" parent="." unique_id=1932720241]
@@ -24,7 +32,8 @@ shape = SubResource("CircleShape2D_dn5ey")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1160745046]
 texture_filter = 1
-scale = Vector2(0.09791667, 0.08593751)
+position = Vector2(-3.8146973e-06, 2.0000153)
+scale = Vector2(0.19479167, 0.15625001)
 texture = ExtResource("1_jfe6r")
 region_enabled = true
 region_rect = Rect2(120, 104, 240, 256)
@@ -47,13 +56,6 @@ target_position = Vector2(-10, 0)
 position = Vector2(27, 4)
 target_position = Vector2(10, 0)
 
-[node name="Up" type="RayCast2D" parent="." unique_id=18191901]
-position = Vector2(1, -19)
-target_position = Vector2(0, -12)
-
-[node name="Hurtbox" type="Area2D" parent="Up" unique_id=818333566]
-position = Vector2(-1, 19)
-
+[connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]
 [connection signal="body_entered" from="DetectionZone" to="." method="FoundPlayer"]
 [connection signal="body_exited" from="DetectionZone" to="." method="LostPlayer"]
-[connection signal="body_entered" from="Up/Hurtbox" to="." method="_on_hurtbox_body_entered"]
