@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://wa0po0q7iin3"]
 
 [ext_resource type="PackedScene" uid="uid://duk6wkgan1gbm" path="res://Portal.tscn" id="1_cove1"]
+[ext_resource type="Texture2D" uid="uid://df1j44x2c2fff" path="res://animated-parallax-background-mountains-and-footage-170788646_iconl.webp" id="1_lmyl5"]
 [ext_resource type="PackedScene" uid="uid://cnii03he7m13x" path="res://player.tscn" id="1_mc20k"]
 [ext_resource type="PackedScene" uid="uid://jnd42okk82pp" path="res://map.tscn" id="2_cove1"]
 [ext_resource type="PackedScene" uid="uid://brqc4s8kcnv8f" path="res://enemy2.tscn" id="4_dwyiq"]
@@ -9,6 +10,13 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tgpiq"]
 
 [node name="Main" type="Node2D" unique_id=1661045571]
+
+[node name="BackgroundParallax" type="Node2D" parent="." unique_id=958790872]
+
+[node name="bg" type="Sprite2D" parent="BackgroundParallax" unique_id=1213548758]
+position = Vector2(5843.9985, 93.99951)
+scale = Vector2(63.75417, 41.114624)
+texture = ExtResource("1_lmyl5")
 
 [node name="Portal" parent="." unique_id=310453333 instance=ExtResource("1_cove1")]
 position = Vector2(1300, -1616)
