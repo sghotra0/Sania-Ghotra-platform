@@ -28,6 +28,7 @@ public partial class Enemy2 : Enemy
 
     public void FoundPlayer(Node2D body)
     {
+        GD.Print("Player found");
         if (body is Player)
             target = body;
     }
@@ -35,6 +36,7 @@ public partial class Enemy2 : Enemy
 
     public void LostPlayer(Node2D body)
     {
+        GD.Print("Player lost");
         if (body is Player)
             target = null;
     }

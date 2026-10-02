@@ -30,7 +30,7 @@ position = Vector2(31, 9)
 
 [node name="Portal" parent="." unique_id=310453333 instance=ExtResource("3_s8dg4")]
 position = Vector2(4018, -302)
-FileName = "res://enemy_3.tscn"
+FileName = "res://level_3.tscn"
 
 [node name="Enemy" parent="." unique_id=36427185 instance=ExtResource("4_ex07k")]
 position = Vector2(1937, 289)

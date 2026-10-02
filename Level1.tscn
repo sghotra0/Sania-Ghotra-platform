@@ -14,8 +14,8 @@
 [node name="BackgroundParallax" type="Node2D" parent="." unique_id=958790872]
 
 [node name="bg" type="Sprite2D" parent="BackgroundParallax" unique_id=1213548758]
-position = Vector2(5843.9985, 93.99951)
-scale = Vector2(63.75417, 41.114624)
+position = Vector2(7003.9995, -2060.5)
+scale = Vector2(50.087498, 61.814228)
 texture = ExtResource("1_lmyl5")
 
 [node name="Portal" parent="." unique_id=310453333 instance=ExtResource("1_cove1")]
@@ -24,12 +24,6 @@ FileName = "res://Level2.tscn"
 
 [node name="Player" parent="." unique_id=922319640 instance=ExtResource("1_mc20k")]
 position = Vector2(-100, -46)
-
-[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=949469830]
-
-[node name="RayCast2D" type="RayCast2D" parent="Player" unique_id=94072031]
-position = Vector2(21, 55)
-collide_with_areas = true
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1876791336]
 position = Vector2(50, 46)
@@ -59,8 +53,7 @@ position = Vector2(972, -17)
 [node name="Enemy3" parent="." unique_id=1694826585 instance=ExtResource("5_dn5ey")]
 position = Vector2(2108, -1104)
 
-[node name="CharacterBody2D2" parent="." unique_id=1083405686 instance=ExtResource("4_dwyiq")]
-position = Vector2(384, -418)
-script = null
+[node name="CharacterBody2D2" parent="." unique_id=855203288 instance=ExtResource("4_dwyiq")]
+position = Vector2(-76, -236)
 
 [connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
