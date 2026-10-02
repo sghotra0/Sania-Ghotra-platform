@@ -19,7 +19,7 @@ scale = Vector2(50.087498, 61.814228)
 texture = ExtResource("1_lmyl5")
 
 [node name="Portal" parent="." unique_id=310453333 instance=ExtResource("1_cove1")]
-position = Vector2(1300, -1616)
+position = Vector2(1186, -1647)
 FileName = "res://Level2.tscn"
 
 [node name="Player" parent="." unique_id=922319640 instance=ExtResource("1_mc20k")]
