@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cbrdqjbyifkfu"]
+
+[ext_resource type="Texture2D" uid="uid://xtfq3ao0viua" path="res://6.png" id="1_hukrr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tgpiq"]
+radius = 77.33692
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gkjmy"]
+radius = 327.92834
+
+[node name="Enemy3" type="CharacterBody2D" unique_id=1549053957]
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1925835004]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1494248502]
+shape = SubResource("CircleShape2D_tgpiq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2094633882]
+position = Vector2(3.0517578e-05, 0)
+scale = Vector2(0.36875, 0.3958333)
+texture = ExtResource("1_hukrr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1886049994]
+shape = SubResource("CircleShape2D_gkjmy")

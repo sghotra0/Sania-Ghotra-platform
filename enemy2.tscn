@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://brqc4s8kcnv8f"]
+
+[ext_resource type="Texture2D" uid="uid://bfurrmhr1sjbb" path="res://3.png" id="1_jfe6r"]
+[ext_resource type="Script" uid="uid://b7vdjvbsthu0j" path="res://Enemy2.cs" id="1_jugo2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lmyl5"]
+radius = 26.24881
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gkjmy"]
+radius = 29.017237
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dn5ey"]
+radius = 168.02678
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=385217939]
+script = ExtResource("1_jugo2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1873147728]
+position = Vector2(2, -6)
+shape = SubResource("CircleShape2D_lmyl5")
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=818333566]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=350932735]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_gkjmy")
+
+[node name="DetectionZone" type="Area2D" parent="." unique_id=1932720241]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionZone" unique_id=2127131469]
+shape = SubResource("CircleShape2D_dn5ey")
+debug_color = Color(0.98125535, 0, 0.3767128, 0.41960785)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1160745046]
+texture_filter = 1
+position = Vector2(2, -8)
+scale = Vector2(0.19479167, 0.15625001)
+texture = ExtResource("1_jfe6r")
+region_enabled = true
+region_rect = Rect2(120, 104, 240, 256)
+
+[node name="leftray" type="RayCast2D" parent="." unique_id=133038341]
+position = Vector2(-16, 18)
+target_position = Vector2(0, 17)
+hit_from_inside = true
+
+[node name="rightray" type="RayCast2D" parent="." unique_id=1679079770]
+position = Vector2(14, 19)
+target_position = Vector2(0, 17)
+hit_from_inside = true
+
+[node name="rightwallray" type="RayCast2D" parent="." unique_id=964674556]
+position = Vector2(-28, 4)
+target_position = Vector2(-10, 0)
+
+[node name="leftwallray" type="RayCast2D" parent="." unique_id=1236995091]
+position = Vector2(27, 4)
+target_position = Vector2(10, 0)
+
+[connection signal="body_entered" from="Hurtbox" to="." method="OnBodyEntered"]
+[connection signal="body_entered" from="DetectionZone" to="." method="FoundPlayer"]
+[connection signal="body_exited" from="DetectionZone" to="." method="LostPlayer"]

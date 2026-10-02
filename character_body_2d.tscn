@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://bxlbrqllk2qxg"]
+
+[ext_resource type="Script" uid="uid://df5xfxyhk0qw8" path="res://character_body_2d.gd" id="1_ij6vw"]
+[ext_resource type="Texture2D" uid="uid://cxyawfcjxk1n5" path="res://1.png" id="2_ghijl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tgpiq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gkjmy"]
+size = Vector2(11, 12)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tgpiq"]
+radius = 20.024984
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gkjmy"]
+radius = 34.058773
+
+[node name="Enemy" type="CharacterBody2D" unique_id=36427185]
+script = ExtResource("1_ij6vw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1244683856]
+shape = SubResource("RectangleShape2D_tgpiq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=455117278]
+texture_filter = 1
+position = Vector2(-2.999999, -0.9999981)
+scale = Vector2(0.084329054, 0.090625)
+texture = ExtResource("2_ghijl")
+region_enabled = true
+region_rect = Rect2(104, 120, 272, 240)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=907275837]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1670826376]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_gkjmy")
+
+[node name="enter_area" type="Area2D" parent="." unique_id=1065413700]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enter_area" unique_id=374698601]
+position = Vector2(-3, 1)
+shape = SubResource("CircleShape2D_tgpiq")
+
+[node name="exit_area" type="Area2D" parent="." unique_id=118263657]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="exit_area" unique_id=2026520956]
+position = Vector2(-1, 1)
+shape = SubResource("CircleShape2D_gkjmy")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="enter_area" to="." method="_on_enter_area_body_entered"]
+[connection signal="body_exited" from="exit_area" to="." method="_on_exit_area_body_exited"]
